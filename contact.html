@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Technex Allies</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .text-divider {
+            background-color: rgba(15, 13, 13, 0.275);
+            border-radius: 10px;
+            height: 2px;
+            width: 100%;
+        }
+
+        .form-floating {
+            background-color: rgba(223, 223, 223, 0);
+        }
+
+        .contactForm {
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .containerp{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+            background-color: rgb(122, 122, 142, 0.574);
+            border-radius: 20px;
+            padding: 20px;
+            width: fit-content;
+            margin: 40px;
+
+        }
+        .page-section1{
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body
+    style="background-image: url(assets/img/strong-transformed.jpg);background-repeat: no-repeat;background-size: 100%; background-attachment: fixed; width: 100%;">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav" style="backdrop-filter: blur(50px); background-color: rgba(169, 169, 215, 0.527);">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">TechNex</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="team.html">Team</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="sign.html">sign up</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav><br><br><br>
+    <!-- Page Header-->
+    <section class="page-section1">
+        <div class="containerp">
+            <h1>Contact Us</h1>
+            <span class="subheading">Have questions? We have answers.</span>
+            <p>Want to get in touch?Fill out the form below to send me a message and we will get back to you as soon as
+                possible!</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <form class="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <div class="form-floating">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..."
+                                data-sb-validations="required" style="border-radius: 20px 20px 0 0;" />
+                            <label class="txt" for="name">Name</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        </div>
+                        <div class="form-floating">
+                            <input class="form-control" id="email" type="email" placeholder="Enter your email..."
+                                data-sb-validations="required,email" />
+                            <label class="txt" for="email">Email address</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        </div>
+                        <div class="form-floating">
+                            <input class="form-control" id="phone" type="tel" placeholder="Enter your phone number..."
+                                data-sb-validations="required" />
+                            <label class="txt" for="phone">Phone Number</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
+                            </div>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" id="message" placeholder="Enter your message here..."
+                                style="height: 12rem; border-radius: 0 0 20px 20px;"
+                                data-sb-validations="required"></textarea>
+                            <label class="txt" for="message">Message</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+
+                            </div>
+                        </div>
+
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                        </div>
+                        <!-- Submit Button-->
+                        <button class="btn text-uppercase disabled" id="submitButton" type="submit"
+                            style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color: rgb(229, 229, 245); background-color: rgb(8, 8, 8);">send</button>
+
+                    </form>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="container"
+                        style="background-color: rgba(51, 51, 92, 0.742);width:100%;border-radius: 15px;height: 85%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color: rgb(230, 230, 246); padding: 10px;">
+                        <h3
+                            style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                            Contact Information</h3>
+                        <div class="text-divider"></div>
+                        <h4 class="text-uppercase m-0">Email:</h4>
+                        <div class="small text-light-50"><a href="mailto:kimomwezainab91@gmail.com">pjs@technex.org</a>
+                        </div><br>
+                        <div class="text-divider"></div>
+                        <h4 class="text-uppercase m-0">Phone:</h4>
+                        <div class="small text-light-50"><a href="tel:+254 707725999">+254 707725999</a></div><br>
+                        <div class="text-divider"></div>
+                        <h4 class="text-uppercase m-0">Office Address:</h4>
+                        <div class="small text-primary-50">
+                            Ronald Ngala Street<br>
+                            Mvita, Mombasa 80100<br>
+                            kenya
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="border-top" style="height: 150px;">
+        <div class="container px-4 px-lg-5">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="#!">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="small text-center text-muted fst-italic">Copyright &copy; Technex 2023</div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+</html>

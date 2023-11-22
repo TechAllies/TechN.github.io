@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>TechNex</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+        /* Style for the accordion container */
+        .accordion {
+            width: 100%;
+            background-color: rgba(196, 230, 236, 0.477);
+            border-radius: 10px;
+        }
+
+        /* Style for the accordion section header */
+        .accordion-section {
+            background-color: none;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #000;
+            transition: color 0.3s;
+        }
+
+        .icon:hover {
+            text-decoration: underline;
+        }
+
+        /* Style for the plus and minus icons */
+        .icon {
+            font-size: 60px;
+            margin-right: 10px;
+            color: #000;
+            transition: color 0.3s;
+            font-weight: 200;
+        }
+
+        /* Style for the content within each section */
+        .accordion-content {
+            display: none;
+            padding: 10px;
+            color: #000;
+        }
+
+
+        /* Style for active (expanded) section */
+        .active-section {
+            color: orange;
+        }
+
+        .containerh {
+            background-color: none;
+            padding: 20px;
+            width: auto;
+            border-radius: 10px;
+        }
+
+        h3:hover {
+            text-decoration: underline;
+            color: orange;
+            border-radius: 5px;
+        }
+
+        /* .bodycont {
+            padding: 2%;
+            /* background-color: rgb(151, 212, 243); */
+        */ .navbar1 {
+            background-color: rgb(20, 112, 158);
+            padding: 10px
+        }
+
+        .text-divider {
+            background-color: rgba(55, 53, 53, 0.275);
+            border-radius: 10px;
+            height: 2px;
+            width: 100%;
+        }
+
+        .containerd {
+            background-color: rgba(223, 223, 231, 0.458);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 10px;
+            backdrop-filter: blur(10px);
+            width: 100%;
+            color: black;
+        }
+
+        section {
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 10px;
+            margin: 20px;
+        }
+
+        .img-fluid {
+            width: 50%;
+            height: 50%;
+        }
+
+        .Test-item {
+            max-width: 30rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+
+        /* Style the section header (clickable) */
+        .section-header {
+            background-color: none;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-content {
+            display: none;
+            padding: 10px;
+        }
+
+        .section-image:hover {
+            opacity: 0.6;
+            height: 80%;
+        }
+
+
+        .plus-sign {
+            font-size: 20px;
+            margin-left: auto;
+        }
+
+
+        .section.active:hover {
+            background-color: #ff6600;
+
+        }
+
+        .slideshow-container {
+            position: relative;
+            margin: 0;
+            height: fit-content;
+            border-radius: 20px;
+
+        }
+
+        .slide {
+            border-radius: 20px;
+        }
+
+        .productt {
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: 80%;
+            object-fit: contain;
+        }
+
+        section.pricing {
+            padding: 10px;
+            background: linear-gradient(to right, #b4b4b4c4, #6abaf078);
+            width: 100%; 
+            max-height: 300px;
+            overflow: scroll;
+            margin: 20px auto; 
+            padding: 10px;
+        }
+
+        .pricing .card {
+            border: none;
+            border-radius: 1rem;
+            transition: all 0.2s;
+            box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing hr {
+            margin: 1.5rem 0;
+        }
+
+        .card-title {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            letter-spacing: .1rem;
+            font-weight: bold;
+        }
+
+
+        .pricing .text-muted {
+            opacity: 0.7;
+        }
+
+        
+
+        @media (min-width: 992px) {
+            .pricing .card:hover {
+                margin-top: -.25rem;
+                margin-bottom: .25rem;
+                box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+            }
+
+            .pricing .card:hover .btn {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bodycont"
+        style="background-image: url('assets/img/bg-bg.jpg');background-repeat: no-repeat;background-size: cover;">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav"
+            style="backdrop-filter: blur(50px); background-color: rgba(169, 169, 215, 0.527);">
+            <div class="container ">
+                <a class="navbar-brand" href="index.html">TechNex</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="team.html">Team </a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="sign.html">sign up</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <br><br>
+        <!-- Page Header-->
+        <section class="page-section"
+            style="background-color:rgba(117, 117, 121, 0.491); border-radius: 18px;padding: 20px;">
+
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-5 justify-content-center">
+                    <div class="container"
+                        style="border-radius: 10px; background-color: rgba(223, 223, 231, 0.458); backdrop-filter: blur(15px);">
+                        <h2 class=" text-dark justify-content-center"
+                            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            Champions of Peace: Uniting for Progress
+                        </h2>
+                        <p class="text-dark"
+                            style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                            At TechNex , we are dedicated to making a difference. Founded in 2023, we have been
+                            passionately working towards promoting peace, justice and strong institutions worldwide. Our
+                            commitment to fostering peace, ensuring access to justice drives every project and
+                            initiative we undertake. Here's what you need to know about us:</p>
+                    </div>
+                    <div class="mission justify-content-center">
+                        <div class="containerd">
+                            <h2 class=" justify-content-center">Our mission</h2>
+                            <hr class="laini">
+                            <p>At TechNex , our mission is to actively contribute to the advancement of SDG 16 by
+                                fostering peace, ensuring access to justice for all, and building accountable
+                                institutions that serve their communities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="border-radius: 15px;;">
+                    <div class="containerh">
+                        <h2 Class="text-primary">What we do;</h2>
+                        <div class="accordion">
+                            <div class="accordion-section" onclick="toggleSection(this)">
+                                <span class="icon">+</span>
+                                <h3 class=".active-section">Research and Advocacy:</h3>
+                            </div>
+                            <div class="accordion-content">
+                                <p>We conduct research, advocate for policies, and work towards creating an enabling
+                                    environment that supports the implementation of SDG 16</p>
+                            </div>
+
+                            <div class="accordion-section" onclick="toggleSection(this)">
+
+                                <span class="icon">+</span>
+                                <h3 class=".active-section">Partnerships:</h3>
+                            </div>
+                            <div class="accordion-content">
+                                <p>We collaborate with governments, non-profit organizations, and civil society groups
+                                    to create impactful initiatives that address the challenges related to peace,
+                                    justice, and strong institutions.
+
+                                </p>
+                            </div>
+
+                            <div class="accordion-section" onclick="toggleSection(this)">
+                                <span class="icon">+</span>
+                                <h3 class=".active-section">Community Engagement:</h3>
+                            </div>
+                            <div class="accordion-content">
+                                <p>We actively engage with communities, empowering them with knowledge and resources to
+                                    promote peacebuilding, social justice, and accountable governance.
+
+                                </p>
+                            </div>
+                            <div class="accordion-section" onclick="toggleSection(this)">
+                                <span class="icon">+</span>
+                                <h3 class=".active-section"> Raise Awareness:</h3>
+                            </div>
+                            <div class="accordion-content">
+                                <p>We raise awareness about the importance of SDG 16 and its impact on societies
+                                    globally through educational campaigns, events, and advocacy efforts.
+                                </p>
+                            </div>
+                        </div>
+                        <script>
+                            function toggleSection(section) {
+                                // Close all other sections
+                                var sections = document.querySelectorAll(".accordion-section");
+                                sections.forEach(function (s) {
+                                    if (s !== section) {
+                                        s.classList.remove('active-section');
+                                        s.querySelector('.icon').textContent = '+';
+                                        s.querySelector('.icon').style.color = '#000';
+                                        s.style.color = '#000';
+                                        s.nextElementSibling.style.display = "none";
+                                    }
+                                });
+
+                                var content = section.nextElementSibling;
+                                var icon = section.querySelector('.icon');
+                                if (content.style.display === "none") {
+                                    content.style.display = "block";
+                                    icon.textContent = '-';
+                                    section.classList.add('active-section');
+                                    icon.style.color = 'orange';
+                                    section.style.color = 'orange';
+                                } else {
+                                    content.style.display = "none";
+                                    icon.textContent = '+';
+                                    section.classList.remove('active-section');
+                                    icon.style.color = '#000';
+                                    section.style.color = 'orange';
+                                }
+                            }
+
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+<section class="pricing py-5">
+    <h2 Class="text-primary">Strategic Goals</h2>
+    <hr>
+    <div class="row" style="overflow-x: hidden;">
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h3 class="text-muted"> Empower Vulnerable Groups:</h3>
+
+                    <hr>
+                    <p>We are looking forwad to develop programs that empower vulnerable groups, such as
+                        women,
+                        children, or refugees, providing them with resources and opportunities for a better
+                        future.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h3 class="text-muted">Conflict Resolution:</h3>
+                    <hr>
+                    <p>We want to be able to facilitate peaceful resolution of a certain number of local conflicts
+                        within a specified period, fostering harmony and stability in affected communities.</p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h3 class="text-muted">Advocacy and Awareness: </h3>
+                    <hr>
+                    <p>Conduct more campaigns to raise awareness about SDG 16 and its importance, engaging a specific
+                        groups and number of people through various awareness initiatives.</p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h3 class="text-muted">Increase Access to Justice:</h3>
+                    <hr>
+                    <p>Ensure that a certain percentage of marginalized communities and Academic Institutions have
+                        access to legal aid services, promoting fairness and equality under the law.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h3 class="text-muted">Reduce Corruption Levels:</h3>
+                    <hr>
+                    <p>Implement anti-corruption measures within specific sectors or communities(mainly schools), aiming
+                        for a quantifiable reduction in corruption incidents.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h3 class="text-muted">Partnerships and Collaboration:</h3>
+                    <hr>
+                    <p>We would also love to establish partnerships with a certain number of governmental and
+                        non-governmental organizations, fostering collaboration to amplify the impact of initiatives.
+                    </p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h3 class="text-muted">Monitoring and Evaluation:</h3>
+                    <hr>
+                    <p>Implement a robust monitoring and evaluation system to assess the effectiveness of our
+                        organization's projects related to SDG 16, ensuring continuous improvement and impact
+                        measurement.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="page-section"
+            style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; backdrop-filter: blur(100px); border-radius: 20px; padding: 20px; background-color:rgb(117, 117, 121, 0.491);">
+            <div class="row">
+                <div class="col-lg-7 justify-content-center"
+                    style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; border-radius: 20px; padding: 20px; background-color: rgba(223, 223, 231, 0.458); backdrop-filter: blur(5px);">
+                    <h2 Class="text-primary">Strategic Goals</h2>
+                    <hr class="laini">
+                    <h3 class="text-muted"> Empower Vulnerable Groups:</h3>
+                    <p>We are looking forwad to develop programs that empower vulnerable groups, such as women,
+                        children, or refugees, providing them with resources and opportunities for a better future.</p>
+                    <br><br>
+                    <hr class="laini">
+                    <h3 class="text-muted">Conflict Resolution:</h3>
+                    <p>We want to be able to facilitate peaceful resolution of a certain number of local conflicts
+                        within a specified period, fostering harmony and stability in affected communities.</p>
+                    <br><br>
+                    <hr class="laini">
+                    <h3 class="text-muted">Advocacy and Awareness: </h3>
+                    <p>Conduct more campaigns to raise awareness about SDG 16 and its importance, engaging a specific
+                        groups and number of people through various awareness initiatives.</p>
+
+                    <br>
+                    <hr class="laini">
+                    <h3 class="text-muted">Increase Access to Justice:</h3>
+                    <p>Ensure that a certain percentage of marginalized communities and Academic Institutions have
+                        access to legal aid services, promoting fairness and equality under the law.</p>
+                    <br>
+                    <hr class="laini">
+                    <h3 class="text-muted">Reduce Corruption Levels:</h3>
+                    <p>Implement anti-corruption measures within specific sectors or communities(mainly schools), aiming
+                        for a quantifiable reduction in corruption incidents.</p>
+                    <br>
+                    <hr class="laini">
+                    <h3 class="text-muted">Partnerships and Collaboration:</h3>
+                    <p>We would also love to establish partnerships with a certain number of governmental and
+                        non-governmental organizations, fostering collaboration to amplify the impact of initiatives.
+                    </p><br>
+                    <hr class="laini">
+                    <h3 class="text-muted">Monitoring and Evaluation:</h3>
+                    <p>Implement a robust monitoring and evaluation system to assess the effectiveness of our
+                        organization's projects related to SDG 16, ensuring continuous improvement and impact
+                        measurement.</p>
+                </div>
+
+                <div class="col-md-4"
+                    style="background-color: rgba(142, 142, 170, 0.49);border-radius:  18px;backdrop-filter: blur(15px); padding: 10px; margin: 20px;">
+                    <h2 Class="text-primary"> Inspiring Change: Our Impact Stories</h2>
+                    <hr class="laini">
+                    <div class="accordion" style="border: 0; background-color: none;">
+                        <div class="section" style="border-radius: 10px; border: 0;">
+                            <div class="section-header">
+
+
+                                <img class="section-image" src="assets/img/women2.jpg" width="100%" height="auto"
+                                    style="border-radius: 10px;">
+                            </div>
+                            <div class="section-content">
+                                <h3 class="text-muted">Empowering Rural Women:</h3>
+                                <p>Through vocational training, we empowered women in rural areas, boosting their
+                                    income and transforming communities.</p>
+                            </div>
+
+                        </div>
+                        <div class="section" style="border: 0;">
+                            <div class="section-header">
+
+
+                                <img class="section-image" src="assets/img/boy-girl.jpg" width="100%" height="70%"
+                                    style="border-radius: 10px;">
+                            </div>
+                            <div class="section-content">
+                                <h3 class="text-muted">Justice for Vulnerable children:</h3>
+                                <p>Legal support ensured justice for underprivileged children, securing their rights
+                                    and enabling a brighter future..</p>
+                            </div>
+                        </div>
+                        <div class="section" style="border: 0;">
+                            <div class="section-header">
+
+
+                                <img class="section-image" src="assets/img/corrupt.jpeg" width="100%" height="70%"
+                                    style="border-radius: 10px;">
+                            </div>
+                            <div class="section-content">
+                                <h3 class="text-muted">Corruption-Free Schools:</h3>
+                                <p> Anti-corruption initiatives in schools led to transparent fund management,
+                                    improving educational resources and student outcomes.</p>
+                            </div>
+                        </div>
+                        <div class="section" style="border: 0;">
+                            <div class="section-header">
+
+
+                                <img class="section-image" src="assets/img/mediation.jpg" width="100%" height="auto"
+                                    style="border-radius: 10px;">
+                            </div>
+                            <div class="section-content">
+                                <h3 class="text-muted">Community Mediation Success:</h3>
+                                <p> We have provided training on conflict prevention and mediation to resolved land
+                                    disputes, fostering harmony and economic stability in conflicted communities.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="section" style="border: 0;">
+                            <div class="section-header">
+
+
+                                <img class="section-image" src="assets/img/gov.jpeg" width="100%" height="60%"
+                                    style="border-radius: 10px;">
+                            </div>
+                            <div class="section-content">
+                                <h3 class="text-muted">Transparent Governance:</h3>
+                                <p> Partnering with local governments, we enhanced transparency, building trust and
+                                    accountability among citizens and officials by offering training programs and
+                                    workshops to the youth on implementation of transparent and credible government
+                                    policies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+
+
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const sections = document.querySelectorAll(".section");
+
+                            sections.forEach((section) => {
+                                const header = section.querySelector(".section-header");
+                                const content = section.querySelector(".section-content");
+
+                                header.addEventListener("click", () => {
+                                    if (section.classList.contains("active")) {
+                                        section.classList.remove("active");
+                                        content.style.display = "none";
+                                    } else {
+                                        sections.forEach((s) => {
+                                            s.classList.remove("active");
+                                            s.querySelector(".section-content").style.display = "none";
+                                        });
+                                        section.classList.add("active");
+                                        content.style.display = "block";
+                                    }
+                                });
+                            });
+                        });
+
+
+                    </script>
+        </section>
+        <section>
+            <div class="row"
+                style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                <div class="col-md-6"
+                    style="backdrop-filter: blur(25px);background-color: rgba(223, 223, 231, 0.458);  padding: 10px; border-radius: 20px; color: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                    <h3>
+                        <center>Check out our products</center>
+                    </h3>
+                    <hr>
+                    <div class="slideshow-container">
+                        <div class="slide">
+                            <img src="assets/img/ghoodie.png" alt="Image 1">
+
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/kid-orange.png" alt="Image 2" class="productt">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/white_cap.png" alt="Image 3" class="productt">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/bucket_hat.png" alt="Image 3" class="productt">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/whshirt.png" alt="Image 3" class="productt">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/whoodie.png" alt="Image 3" class="productt">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/kid_blue.png" alt="Image 3" class="productt">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/black-cap.png" alt="Image 3" class="productt">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/phoodie.png" alt="Image 3" class="productt">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/im1.png" alt="Image 3" class="productt">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/kid_grey.png" alt="Image 3" class="productt">
+                        </div>
+                    </div>
+                    <script>
+                        // slideshow.js
+                        let slideIndex = 0;
+
+                        function showSlides() {
+                            let slides = document.getElementsByClassName("slide");
+                            for (let i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                            }
+                            slideIndex++;
+                            if (slideIndex > slides.length) {
+                                slideIndex = 1;
+                            }
+                            slides[slideIndex - 1].style.display = "block";
+                            setTimeout(showSlides, 3000); // Change image every 3 seconds (3000 milliseconds)
+                        }
+
+                        showSlides();
+
+                    </script>
+                </div>
+                <div class="col-md-1"></div>
+                <div class='col-md-5'
+                    style="backdrop-filter: blur(25px);background-color: rgba(223, 223, 231, 0.458);  padding: 10px; border-radius: 20px; color: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                    <h3 class="text-primary"> Join Us in Our Mission</h3>
+                    <p>We believe that collective action is key to achieving SDG 16. Join us in our mission to create a
+                        more just, peaceful, and accountable world. Here's how you can get involved:</p>
+
+                    <h3 class="text-primary">Donate:</h3>
+                    <p>Your support helps us fund projects and initiatives that make a real difference in communities.
+                    </p>
+                    <h3 class="text-primary">Volunteer:</h3>
+                    <p>Contribute your time, skills, and expertise to our programs and campaigns.</p>
+                    <h3 class="text-primary">Spread the Word:</h3>
+                    <p>Help us raise awareness by sharing our content and initiatives on social media.</p>
+                    Thank you for being part of our journey towards a world where peace, justice, and strong
+                    institutions prevail.
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="border-top" style="height: 150px;">
+            <div class="container">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="#!">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#!">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#!">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#!">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="small text-center text-muted fst-italic">Copyright &copy; TechNex 2023</div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
