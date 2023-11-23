@@ -20,21 +20,14 @@
     <link href="css/styles.css" rel="stylesheet" />
 
     <style>
-        
+        /* Style for the accordion container */
         .accordion {
             width: 100%;
             background-color: rgba(196, 230, 236, 0.477);
             border-radius: 10px;
         }
-        .body,html {
-            background-image: url('assets/img/5e7c21a34149343b88c20898_Gradient-home.png'), linear-gradient(#f8f8f8, #f8f8f8);
-            background-position: 0 0, 0 0;
-            background-repeat: no-repeat, repeat;
-            background-size: 100%, auto;
-            background-attachment: scroll, scroll;
-        }
 
-        
+        /* Style for the accordion section header */
         .accordion-section {
             background-color: none;
             padding: 10px;
@@ -59,6 +52,7 @@
             font-weight: 200;
         }
 
+        /* Style for the content within each section */
         .accordion-content {
             display: none;
             padding: 10px;
@@ -66,7 +60,7 @@
         }
 
 
-        /
+        /* Style for active (expanded) section */
         .active-section {
             color: orange;
         }
@@ -134,7 +128,7 @@
             transition: background-color 0.3s;
         }
 
-       
+        /* Style the section header (clickable) */
         .section-header {
             background-color: none;
             color: #fff;
@@ -188,15 +182,87 @@
             height: 80%;
             object-fit: contain;
         }
+        .story {
+            border-radius: 20px;
+            text-align: center;
+            background-color: rgba(28, 52, 63, 0.484);
+            color: white;
+        }
+        .story p {
+            padding: 10px;
+        }
+        .story h3 {
+            font-family: monospace;
+            background-color: #000;
+            font-size: x-large;
+        }
+
+        section.pricing {
+            padding: 10px;
+            backdrop-filter: blur(50px);
+            background-color: #11097e4b;
+            width: fit-content; 
+            max-height: fit-content;
+            margin: 20px; 
+        }
+
+        .pricing .card {
+            border: none;
+            border-radius: 1rem;
+            transition: all 0.2s;
+            box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing hr {
+            margin: 1.5rem 0;
+        }
+
+        .card-title {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            letter-spacing: .1rem;
+            font-weight: bold;
+        }
+
+
+        .pricing .text-muted {
+            opacity: 0.7;
+        }
+        .card {
+            background-image: linear-gradient(rgba(0, 0, 128, 0.226), rgba(141, 141, 141, 0.39));
+            max-height: fit-content;
+            margin: 10px;
+        }
+
+        
+
+        @media (min-width: 992px) {
+            .pricing .card:hover {
+                margin-top: -.25rem;
+                margin-bottom: .25rem;
+                box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+            }
+
+            .pricing .card:hover .btn {
+                opacity: 1;
+            }
+        }
+        body,html {
+            background-image: url('assets/img/5e7c21a34149343b88c20898_Gradient-home.png'), linear-gradient(#f8f8f8, #4db1d0);
+            background-position: 0 0, 0 0;
+            background-repeat: no-repeat, repeat;
+            background-size: 100%, auto;
+            background-attachment: scroll, scroll;
+        }
     </style>
 </head>
 
 <body>
-    <div class="bodycont"
-        
+    <!-- <div class="bodycont"
+        style="background-image: url('assets/img/bg-bg.jpg');background-repeat: no-repeat;background-size: cover;"> -->
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav"
-            style="backdrop-filter: blur(50px); background-color: rgba(169, 169, 215, 0.527);">
+            style="backdrop-filter: blur(50px); background-color: rgba(169, 169, 215, 0.527); position: fixed; margin-bottom: 10px;">
             <div class="container ">
                 <a class="navbar-brand" href="index.html">TechNex</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -331,125 +397,133 @@
 
             </div>
         </section>
+<section class="pricing py-5" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    <h2 Class="text-primary">Strategic Goals</h2>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h4 class="text-muted"> Empower Vulnerable Groups:</h4>
 
-        <section class="page-section"
-            style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; backdrop-filter: blur(100px); border-radius: 20px; padding: 20px; background-color:rgb(117, 117, 121, 0.491);">
-            <div class="row">
-                <div class="col-lg-7 justify-content-center"
-                    style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; border-radius: 20px; padding: 20px; background-color: rgba(223, 223, 231, 0.458); backdrop-filter: blur(5px);">
-                    <h2 Class="text-primary">Strategic Goals</h2>
-                    <hr class="laini">
-                    <h3 class="text-muted"> Empower Vulnerable Groups:</h3>
-                    <p>We are looking forwad to develop programs that empower vulnerable groups, such as women,
-                        children, or refugees, providing them with resources and opportunities for a better future.</p>
-                    <br><br>
-                    <hr class="laini">
-                    <h3 class="text-muted">Conflict Resolution:</h3>
+                    <hr>
+                    <p>We are looking forwad to develop programs that empower vulnerable groups, such as
+                        women,
+                        children, or refugees, providing them with resources and opportunities for a better
+                        future.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h4 class="text-muted">Conflict Resolution:</h4>
+                    <hr>
                     <p>We want to be able to facilitate peaceful resolution of a certain number of local conflicts
                         within a specified period, fostering harmony and stability in affected communities.</p>
-                    <br><br>
-                    <hr class="laini">
-                    <h3 class="text-muted">Advocacy and Awareness: </h3>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h4 class="text-muted">Advocacy and Awareness: </h4>
+                    <hr>
                     <p>Conduct more campaigns to raise awareness about SDG 16 and its importance, engaging a specific
                         groups and number of people through various awareness initiatives.</p>
 
-                    <br>
-                    <hr class="laini">
-                    <h3 class="text-muted">Increase Access to Justice:</h3>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h4 class="text-muted">Increase Access to Justice:</h4>
+                    <hr>
                     <p>Ensure that a certain percentage of marginalized communities and Academic Institutions have
                         access to legal aid services, promoting fairness and equality under the law.</p>
-                    <br>
-                    <hr class="laini">
-                    <h3 class="text-muted">Reduce Corruption Levels:</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h4 class="text-muted">Reduce Corruption Levels:</h4>
+                    <hr>
                     <p>Implement anti-corruption measures within specific sectors or communities(mainly schools), aiming
                         for a quantifiable reduction in corruption incidents.</p>
-                    <br>
-                    <hr class="laini">
-                    <h3 class="text-muted">Partnerships and Collaboration:</h3>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                    <h4 class="text-muted">Partnerships and Collaboration:</h4>
+                    <hr>
                     <p>We would also love to establish partnerships with a certain number of governmental and
                         non-governmental organizations, fostering collaboration to amplify the impact of initiatives.
-                    </p><br>
-                    <hr class="laini">
-                    <h3 class="text-muted">Monitoring and Evaluation:</h3>
-                    <p>Implement a robust monitoring and evaluation system to assess the effectiveness of our
-                        organization's projects related to SDG 16, ensuring continuous improvement and impact
-                        measurement.</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+        <section class="page-section"
+            style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            backdrop-filter: blur(100px); 
+            border-radius: 20px; 
+            padding: 20px;
+            background-image: linear-gradient(rgba(0, 0, 255, 0.277), rgba(255, 255, 255, 0.118));">
+            <div class="row">
+                <h2 Class="text-primary"> Inspiring Change: Our Impact Stories</h2>
+                <hr>
+                <div class="col-md-4">
+                    <div class="story">
+                        <img class="section-image" src="assets/img/women2.jpg" style="border-radius: 20px 20px 0 0; margin-bottom: 10px;">
+                        <div class="black" style="background-color: #000">
+                        <h3>Empowering Rural Women:</h3>
+                    </div>
+                        <hr>
+                        <p>Through vocational training, we empowered women in rural areas, boosting their
+                            income and transforming communities.</p>               
+                    </div>
+                </div>
+            
+                
+                   
+                <div class="col-md-4">
+                    <div class="story">
+                        <img class="section-image" src="assets/img/boy-girl.jpg" style="border-radius: 20px 20px 0 0; margin-bottom: 10px;">
+                        <h3>Justice for Vulnerable children:</h3>
+                        <hr>
+                        <p>Legal support ensured justice for underprivileged children, securing their rights
+                            and enabling a brighter future..</p>
+                    </div>
                 </div>
 
-                <div class="col-md-4"
-                    style="background-color: rgba(142, 142, 170, 0.49);border-radius:  18px;backdrop-filter: blur(15px); padding: 10px; margin: 20px;">
-                    <h2 Class="text-primary"> Inspiring Change: Our Impact Stories</h2>
-                    <hr class="laini">
-                    <div class="accordion" style="border: 0; background-color: none;">
-                        <div class="section" style="border-radius: 10px; border: 0;">
-                            <div class="section-header">
 
 
-                                <img class="section-image" src="assets/img/women2.jpg" width="100%" height="auto"
-                                    style="border-radius: 10px;">
-                            </div>
-                            <div class="section-content">
-                                <h3 class="text-muted">Empowering Rural Women:</h3>
-                                <p>Through vocational training, we empowered women in rural areas, boosting their
-                                    income and transforming communities.</p>
-                            </div>
-
-                        </div>
-                        <div class="section" style="border: 0;">
-                            <div class="section-header">
+                <div class="col-md-4">
+                    <div class="story">
+                        <img class="section-image" src="assets/img/corrupt.jpeg" style="border-radius: 20px 20px 0 0; margin-bottom: 10px;">
+                        <h3>Corruption-Free Schools:</h3>
+                        <hr>
+                        <p> Anti-corruption initiatives in schools led to transparent fund management,
+                            improving educational resources and student outcomes.</p>
+                    </div>
+                </div>
 
 
-                                <img class="section-image" src="assets/img/boy-girl.jpg" width="100%" height="70%"
-                                    style="border-radius: 10px;">
-                            </div>
-                            <div class="section-content">
-                                <h3 class="text-muted">Justice for Vulnerable children:</h3>
-                                <p>Legal support ensured justice for underprivileged children, securing their rights
-                                    and enabling a brighter future..</p>
-                            </div>
-                        </div>
-                        <div class="section" style="border: 0;">
-                            <div class="section-header">
-
-
-                                <img class="section-image" src="assets/img/corrupt.jpeg" width="100%" height="70%"
-                                    style="border-radius: 10px;">
-                            </div>
-                            <div class="section-content">
-                                <h3 class="text-muted">Corruption-Free Schools:</h3>
-                                <p> Anti-corruption initiatives in schools led to transparent fund management,
-                                    improving educational resources and student outcomes.</p>
-                            </div>
-                        </div>
-                        <div class="section" style="border: 0;">
-                            <div class="section-header">
-
-
-                                <img class="section-image" src="assets/img/mediation.jpg" width="100%" height="auto"
-                                    style="border-radius: 10px;">
-                            </div>
-                            <div class="section-content">
-                                <h3 class="text-muted">Community Mediation Success:</h3>
-                                <p> We have provided training on conflict prevention and mediation to resolved land
-                                    disputes, fostering harmony and economic stability in conflicted communities.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="section" style="border: 0;">
-                            <div class="section-header">
-
-
-                                <img class="section-image" src="assets/img/gov.jpeg" width="100%" height="60%"
-                                    style="border-radius: 10px;">
-                            </div>
-                            <div class="section-content">
-                                <h3 class="text-muted">Transparent Governance:</h3>
-                                <p> Partnering with local governments, we enhanced transparency, building trust and
-                                    accountability among citizens and officials by offering training programs and
-                                    workshops to the youth on implementation of transparent and credible government
-                                    policies.</p>
-                            </div>
-                        </div>
+                
                     </div>
                     <script>
 
@@ -505,24 +579,6 @@
                         </div>
                         <div class="slide">
                             <img src="assets/img/whshirt.png" alt="Image 3" class="productt">
-                        </div>
-                        <div class="slide">
-                            <img src="assets/img/whoodie.png" alt="Image 3" class="productt">
-                        </div>
-                        <div class="slide">
-                            <img src="assets/img/kid_blue.png" alt="Image 3" class="productt">
-                        </div>
-                        <div class="slide">
-                            <img src="assets/img/black-cap.png" alt="Image 3" class="productt">
-                        </div>
-                        <div class="slide">
-                            <img src="assets/img/phoodie.png" alt="Image 3" class="productt">
-                        </div>
-                        <div class="slide">
-                            <img src="assets/img/im1.png" alt="Image 3" class="productt">
-                        </div>
-                        <div class="slide">
-                            <img src="assets/img/kid_grey.png" alt="Image 3" class="productt">
                         </div>
                     </div>
                     <script>
